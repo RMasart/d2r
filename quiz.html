@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz D2R</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <!-- En-tête -->
+    <div class="header">QUIZ D2R</div>
+
+    <!-- Conteneur principal -->
+    <div class="container">
+        <!-- Section bienvenue -->
+        <div class="welcome-section" id="welcome-section">
+            <div>
+                <!-- Image principale -->
+                <img class="pageQuiz" src="pageQuiz.png" alt="Accueil">
+            </div>
+            <hr>
+            <!-- Champ de saisie pour le nom -->
+            <div class="input-container">
+                <input type="text" id="user-name" placeholder="Entrez votre nom">
+            </div>
+            <!-- Message d'erreur -->
+            <p id="error-message" class="hidden">Veuillez entrer votre nom avant de commencer.</p>
+            <!-- Choix des thèmes -->
+            <div class="theme-container">
+                <button class="theme-button" data-theme="theme1">Thème 1</button>
+                <button class="theme-button" data-theme="theme2">Thème 2</button>
+                <button class="theme-button" data-theme="theme3">Thème 3</button>
+            </div>
+            <!-- Bouton de démarrage -->
+            <button class="start-button" id="start-quiz">Commencer</button>
+            <!-- Bouton pour voir le classement -->
+            <button id="view-ranking">Voir le classement</button>
+        </div>
+
+        <!-- Section classement -->
+        <div class="ranking-section hidden" id="ranking-section">
+            <h3>Classement QUIZ</h3>
+            <hr>
+            <!-- Section des 3 premiers -->
+            <div class="top-3"></div>
+            <!-- Liste des autres participants -->
+            <div class="ranking-table"></div>
+            <!-- Bouton pour revenir à l'accueil -->
+            <button id="return-home">Retour à l'accueil</button>
+        </div>
+    </div>
+
+    <!-- Section du quiz (initialement masquée) -->
+    <div id="quiz-section" class="hidden">
+        <div id="question-container"></div>
+        <div id="answers-container"></div>
+        <button id="next-question" class="hidden">Question Suivante</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>

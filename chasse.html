@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasse au trésor</title>
+    <link rel="stylesheet" href="chasse.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Chasse au trésor - Trouvez les indices</h1>
+        </div>
+        <div class="button-container">
+            <a href="reglement.html" class="btn">Règle du jeu</a>
+            <a href="contexte.html" class="btn">Contexte</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=S4kC7fqmH2_a3gCc" target="_blank" class="btn">NE PAS TOUCHER !!</a>
+        </div>
+
+    </header>
+
+    <div id="indices" class="container">
+        <button class="card" onclick="showCodePrompt(1)">
+            <img src="loupe/loupe1.png" alt="Indice 1">
+            <h3>Indice 1</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(2)">
+            <img src="loupe/loupe2.png" alt="Indice 2">
+            <h3>Indice 2</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(3)">
+            <img src="loupe/loupe3.png" alt="Indice 3">
+            <h3>Indice 3</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(4)">
+            <img src="loupe/loupe4.png" alt="Indice 4">
+            <h3>Indice 4</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(5)">
+            <img src="loupe/loupe5.png" alt="Indice 5">
+            <h3>Indice 5</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(6)">
+            <img src="loupe/loupe6.png" alt="Indice 6">
+            <h3>Indice 6</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(7)">
+            <img src="loupe/loupe7.png" alt="Indice 7">
+            <h3>Indice 7</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(8)">
+            <img src="loupe/loupe8.png" alt="Indice 8">
+            <h3>Indice 8</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(9)">
+            <img src="loupe/loupe9.png" alt="Indice 9">
+            <h3>Indice 9</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(10)">
+            <img src="loupe/loupe10.png" alt="Indice 10">
+            <h3>Indice 10</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(11)">
+            <img src="loupe/loupe11.png" alt="Indice 11">
+            <h3>Indice 11</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(12)">
+            <img src="loupe/loupe12.png" alt="Indice 12">
+            <h3>Indice 12</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(13)">
+            <img src="loupe/loupe13.png" alt="Indice 13">
+            <h3>Indice 13</h3>
+        </button>
+        <button class="card" onclick="showCodePrompt(14)">
+            <img src="loupe/loupe14.png" alt="Indice 14">
+            <h3>Indice 14</h3>
+        </button>
+        <button class="card" onclick="showFinalPrompt()">
+            <img src="final.jpg" alt="Final">
+            <h3>Final</h3>
+        </button>
+    </div>
+
+
+    <div id="final-word" class="hidden-content">
+        <h2>Remplissez le mot à trous :</h2>
+        <div id="word-container"></div>
+        <button class="btn" onclick="backToSelection()">Retour aux indices</button>
+    </div>
+
+
+    <div id="result" class="hidden-content">
+        <h2 id="result-text"></h2>
+        <button class="btn" onclick="backToSelection()">Retour aux indices</button>
+    </div>
+    <!-- Section pour les félicitations -->
+    <div id="congratulations" class="hidden-content">
+        <h2>Félicitations, vous avez terminé ! 🎉</h2>
+        <p>Merci d'avoir participé à cette chasse au trésor !</p>
+    </div>
+
+    <script src="chasse.js"></script>
+</body>
+
+</html>

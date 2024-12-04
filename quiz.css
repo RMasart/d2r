@@ -1,0 +1,363 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+/* En-tête */
+.header {
+    width: 100%;
+    background-color: #004258;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Section de bienvenue */
+.welcome-section {
+    background-image: url(fond\ rose.jpg);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image principale */
+.pageQuiz {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Ligne de séparation */
+.welcome-section hr {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid #004258;
+}
+
+/* Champ de saisie pour le nom */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.theme-button {
+    padding: 10px 10px;
+    background-color: #00ff00;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #00a000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.theme-button.selected {
+    background-color: #ffa500;
+    color: #fff;
+    border: 2px solid #e59400;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Boutons de réponse dans le quiz */
+#answers-container button {
+    padding: 12px 20px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    /* Dégradé vert */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+#answers-container button:hover {
+    transform: scale(1.05);
+    /* Zoom léger */
+    background: linear-gradient(45deg, #66BB6A, #388E3C);
+    /* Dégradé plus clair */
+}
+
+/* Effet lors du clic */
+#answers-container button:active {
+    transform: scale(0.95);
+    /* Rétrécit légèrement */
+    background: linear-gradient(45deg, #388E3C, #1B5E20);
+    /* Dégradé foncé */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#return-home {
+    background-color: #4CAF50;
+    /* Vert agréable */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#return-home:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#return-home:active {
+    transform: scale(0.95);
+}
+
+
+.input-container input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Message d'erreur */
+#error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Bouton de démarrage */
+.start-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.start-button:hover {
+    background-color: #5f0101;
+}
+
+/* Section classement */
+.ranking-section {
+    background-image: url(fond\ bleu.jpg);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre du classement */
+.ranking-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #004258;
+}
+
+/* Ligne de séparation du classement */
+.ranking-section hr {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    border: 1px solid #004258;
+}
+
+/* Conteneurs des classements */
+.top-3,
+.ranking-table {
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rangée des participants */
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+#view-ranking {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* En-têtes du tableau */
+.ranking-table .header {
+    font-weight: bold;
+    background-color: #004258;
+    color: white;
+    padding: 5px 0;
+}
+
+/* Alignement des colonnes */
+.ranking-table .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ranking-table .row span {
+    flex: 1;
+    text-align: center;
+}
+
+/* Rangée des utilisateurs */
+.ranking-table .row:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Rangée spécifique des meilleurs scores */
+.ranking-table .row:nth-child(1) span {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+#view-ranking:hover {
+    background-color: #005f99;
+}
+
+/* Rangées spécifiques des top 3 */
+.top-3 .row span {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+/* Rangées classiques */
+.ranking-table .row span:first-child {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Section du quiz */
+#quiz-section {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Conteneur des questions */
+#question-container h2 {
+    font-size: 18px;
+    color: #004258;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Boutons de réponse */
+.answer-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #005f99;
+}
+
+/* Bouton "Question Suivante" */
+#next-question {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#next-question:hover {
+    background-color: #3e8e41;
+}
+
+/* Classe masquée */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .welcome-section,
+    .ranking-section,
+    #quiz-section {
+        width: 100%;
+    }
+}
